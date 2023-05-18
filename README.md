@@ -3,7 +3,7 @@
 This is a demo app that demonstrates how to use Rails 6 for a simple tagging system.
 
 The specifications are [redacted]. There was a corner-case left unspecified: what if the same word appears
-multiple times in a sentence, should be tagged every time it appears? I chose 'yes'. 
+multiple times in a sentence, should it be tagged every time it appears? I chose 'yes'. 
 You can see `sentences_presenter_test` for the full list of expectations in this scenario, and
 other potential ambiguities (like case sensitivity).
 

@@ -20,7 +20,7 @@ If bundler is installed on your system, you should be able to run with the follo
 
 ## Caveats
 
-I delibirately chose to use _vanilla Rails 6_, as I believe it better demonstrates the inner workings of how
+I deliberately chose to use _vanilla Rails 6_, as I believe it better demonstrates the inner workings of how
 forms, views, and controllers interact. In a real project, I would likely reach for dependies like _Turbo Rails_
 and _Draper_.
 

@@ -1,0 +1,44 @@
+// Place all the styles related to the sentence controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.sentence * {
+  vertical-align: top;
+}
+
+.sentence, .sentence * {
+  user-select: none;
+}
+
+.entity {
+  display: inline-block;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+.entityName {
+  padding: 0.5em;
+}
+
+.entityType {
+  padding: 0.5em;
+  font-weight: bold;
+}
+
+.addEntity {
+  display: none;
+}
+
+.selectable:hover {
+  background: yellow;
+  border: 1px solid black;
+  .addEntity {
+    display: inline-block;
+    form {
+      display: grid;
+      gap: 4px;
+      grid-template-columns: 150px;
+    }
+  }
+}

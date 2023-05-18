@@ -1,0 +1,28 @@
+<% sentence = SentencePresenter.new(@sentence) %>
+
+<div class="sentence">
+<% sentence.chunks.each do |chunk| %>
+  <% if chunk.typ %>
+    <div class="entity" style="background: <%= chunk.color %>">
+      <span class="entityText"><%= chunk.text %></span>
+      <span class="entityType"><%= chunk.typ %></span>
+    </div>
+  <% elsif chunk.selectable %>
+    <div class="entity selectable">
+      <%= chunk.text -%>
+      <br><br>
+      <div class="addEntity"> 
+        <%= form_with url: sentence_entities_path(@sentence), method: :post do |form| %>
+          <%= form.hidden_field :text, :value => chunk.text %>
+          <%= form.text_field :typ, :value => "TYPE" %>
+          <%= form.submit "Tag It" %>
+        <% end %>
+      </div>
+    </div>
+  <% else %>
+    <div class="entity">
+      <%= chunk.text -%>
+    </div>
+  <% end %>
+<% end %>
+</div>

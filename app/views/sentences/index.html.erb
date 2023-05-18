@@ -1,0 +1,6 @@
+<h1>Sentences</h1>
+<ol>
+  <% @sentences.each do |sentence| %>
+    <li><%= link_to sentence.text, sentence %></li>
+  <% end %>
+</ol>
